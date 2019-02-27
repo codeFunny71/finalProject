@@ -40,3 +40,31 @@ p, label {
 button {
     width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+    #homeVideo {
+        display: none;
+    }
+
+    #mobileHomeVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 0;
+    }
+
+    #logIn {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        z-index: 1;
+        box-shadow: 5px 5px 10px black;
+        /*color: lightgray;*/
+    }
+}
+
