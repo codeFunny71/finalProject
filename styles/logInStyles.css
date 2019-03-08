@@ -7,7 +7,12 @@
     z-index: 0;
 }
 
+body {
+    padding-top: 20px;
+}
+
 #loggedInDiv {
+    background-image: url("http://bgfons.com/upload/iron_texture78.jpg");
     position: relative;
     border-radius: 25px;
     width: 60%;
@@ -15,10 +20,10 @@
     margin-left: auto;
     margin-right: auto;
     float: none;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     z-index: 1;
     box-shadow: 5px 5px 10px black;
-    background-color: lightgray;
+    /*background-color: lightgray;*/
     color: black;
     text-align: center;
 }

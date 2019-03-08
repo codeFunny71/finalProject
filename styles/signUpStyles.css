@@ -8,6 +8,7 @@
 }
 
 #signUpDiv {
+    background-image: url("http://bgfons.com/upload/iron_texture78.jpg");
     position: relative;
     border-radius: 25px;
     width: 60%;
@@ -18,7 +19,7 @@
     padding: 20px;
     z-index: 1;
     box-shadow: 5px 5px 10px black;
-    background-color: lightgray;
+    /*background-color: lightgray;*/
     color: black;
     text-align: center;
 }
