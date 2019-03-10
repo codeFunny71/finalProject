@@ -44,6 +44,20 @@ $f3->route('GET|POST /order', function() {
     echo $template->render('views/orderBeer.html');
 });
 
+//view tab route
+$f3->route('GET|POST /viewTab', function() {
+    //load a template
+    $template = new Template();
+    echo $template->render('views/viewTab.html');
+});
+
+//pay tab route
+$f3->route('GET|POST /payTab', function() {
+    //load a template
+    $template = new Template();
+    echo $template->render('views/payTab.html');
+});
+
 
 //Run fat free
 $f3->run();
