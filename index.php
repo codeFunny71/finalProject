@@ -37,6 +37,13 @@ $f3->route('GET|POST /homepage', function() {
     echo $template->render('views/loggedInHP.html');
 });
 
+//order a beer route
+$f3->route('GET|POST /order', function() {
+    //load a template
+    $template = new Template();
+    echo $template->render('views/orderBeer.html');
+});
+
 
 //Run fat free
 $f3->run();
