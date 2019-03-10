@@ -65,6 +65,20 @@ $f3->route('GET|POST /account', function() {
     echo $template->render('views/accountInfo.html');
 });
 
+//admin login route
+$f3->route('GET|POST /adminLogin', function() {
+    //load a template
+    $template = new Template();
+    echo $template->render('views/adminLogin.html');
+});
+
+//admin homepage route
+$f3->route('GET|POST /admin', function() {
+    //load a template
+    $template = new Template();
+    echo $template->render('views/admin.html');
+});
+
 
 //Run fat free
 $f3->run();
