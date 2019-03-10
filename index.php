@@ -58,6 +58,13 @@ $f3->route('GET|POST /payTab', function() {
     echo $template->render('views/payTab.html');
 });
 
+//account information route
+$f3->route('GET|POST /account', function() {
+    //load a template
+    $template = new Template();
+    echo $template->render('views/accountInfo.html');
+});
+
 
 //Run fat free
 $f3->run();
