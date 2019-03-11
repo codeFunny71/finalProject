@@ -53,11 +53,11 @@ class Database
     /**
      * @return array
      */
-    public static function getMembers()
+    public static function getCustomers()
     {
         global $dbh;
         //1. define the query
-        $sql = "SELECT * FROM Members ORDER BY lname";
+        $sql = "SELECT * FROM customers ORDER BY lastName";
         //2. prepare the statement
         $statement = $dbh->prepare($sql);
         //3. bind parameters
@@ -76,12 +76,12 @@ class Database
         return $result;
     }
 
-    public static function getMemberID($id)
+    public static function getCustomerID($id)
     {
 
         global $dbh;
         //1. define the query
-        $sql = "SELECT * FROM Members WHERE member_id=:id";
+        $sql = "SELECT * FROM customers WHERE customerID=:id";
         //2. prepare the statement
         $statement = $dbh->prepare($sql);
         //3. bind parameters
