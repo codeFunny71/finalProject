@@ -6,7 +6,7 @@ class Database
     public function connect()
     {
         try {
-            require_once '/home/mabsherg/config.php';
+            require_once 'config.php';
             //Instantiate a database object
             $dbh = new PDO(DB_DSN, DB_USERNAME,
                 DB_PASSWORD);
@@ -32,16 +32,16 @@ class Database
 
         $statement = $dbh->prepare($sql);
         //3. bind parameters
-        $statement->bindParam(':fname', $newAdd->getFirstName(), PDO::PARAM_STR);
-        $statement->bindParam(':lname', $newAdd->getLastName(), PDO::PARAM_STR);
-        $statement->bindParam(':age', $newAdd->getAddress(), PDO::PARAM_STR);
-        $statement->bindParam(':gender', $newAdd->getCity(), PDO::PARAM_STR);
-        $statement->bindParam(':phone', $newAdd->getState(), PDO::PARAM_STR);
-        $statement->bindParam(':email', $newAdd->getZipCode(), PDO::PARAM_STR);
-        $statement->bindParam(':state', $newAdd->getPhone(), PDO::PARAM_STR);
-        $statement->bindParam(':seeking', $newAdd->getEmail(), PDO::PARAM_STR);
-        $statement->bindParam(':bio', $newAdd->getPassword(), PDO::PARAM_STR);
-        $statement->bindParam(':interests', $newAdd->getAccount(), PDO::PARAM_STR);
+        $statement->bindParam(':firstName', $newAdd->getFirstName(), PDO::PARAM_STR);
+        $statement->bindParam(':lastName', $newAdd->getLastName(), PDO::PARAM_STR);
+        $statement->bindParam(':address', $newAdd->getAddress(), PDO::PARAM_STR);
+        $statement->bindParam(':city', $newAdd->getCity(), PDO::PARAM_STR);
+        $statement->bindParam(':state', $newAdd->getState(), PDO::PARAM_STR);
+        $statement->bindParam(':zipCode', $newAdd->getZipCode(), PDO::PARAM_STR);
+        $statement->bindParam(':phone', $newAdd->getPhone(), PDO::PARAM_STR);
+        $statement->bindParam(':email', $newAdd->getEmail(), PDO::PARAM_STR);
+        $statement->bindParam(':password', $newAdd->getPassword(), PDO::PARAM_STR);
+        $statement->bindParam(':account', $newAdd->getAccount(), PDO::PARAM_STR);
 
 
         //4. execute the statement
